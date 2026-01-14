@@ -1,0 +1,444 @@
+@import url("themeSetup.css");
+/*--========== TABLE SECTION START =========--*/
+.table-container{
+   /*background-color: var(--a);*/
+}
+.table-heading{
+ background-color: var(--d);
+ color: var(--a);
+ padding-left: .5rem;
+ width: 100%;
+ margin-right: .5rem;
+ padding-top:.5rem;
+ padding-bottom: .5rem;
+ font-weight: bold;
+}
+
+/* table search */
+.table-search{
+  background-color: var(--b);
+  border-color:var(--d);
+  outline: none;
+  border:none;
+  box-shadow:none;
+  width: 100px;
+}
+
+.table-search:hover,.table-search:focus {
+  background-color: var(--c);
+  border-color: var(--b);
+  outline: none;
+  border:none;
+  box-shadow:none;
+}
+
+.table-search:hover.table-search::placeholder,.table-search:focus .table-search::placeholder {
+  color:var(--b);
+  font-weight: bold;
+  outline: none;
+  border:none;
+  box-shadow:none;
+}
+
+.table-search::placeholder{
+  color:var(--d);
+  font-weight: bold;
+  text-align: center;
+  outline: none;
+  border:none;
+  box-shadow:none;
+}
+
+.add-table{
+background-color: transparent;
+font-weight: bold;
+font-size: 1.25rem;
+cursor: pointer; 
+padding-top: .5rem;
+padding-bottom: .5rem;
+padding-left:.5rem;
+margin-bottom: .5rem;
+border-top: 1px solid var(--d);
+border-left: 1px solid var(--d);
+border-right: 1px solid var(--d);
+}
+
+.add-table a{
+   color: var(--d);
+}
+
+/* thead */
+.table-responsive .table .thead-theme{
+   background-color: var(--b);
+   color: var(--d);
+   font-weight:bold;
+   text-align:center;
+}
+
+/* thead / tr */
+.table tbody tr:nth-child(odd){
+ color:var(--d);
+ text-align:center;
+ font-weight: bold;
+/* border-bottom: 1px solid var(--d);*/
+}
+.table tbody tr:nth-child(even){
+ color:var(--d);
+ text-align:center;
+/* border-bottom: 1px solid var(--d);*/
+}
+
+/* Edit */
+.edit-theme{
+       /* background-color: var(--edit-bg);*/
+       background-color: var(--b);
+       border: 1px solid var(--d);
+       
+}
+.edit-theme a{
+        /*color: var(--edit-color);*/
+        color: var(--d);
+}
+
+/* delete */
+.delete-theme{
+       /* background-color: var(--delete-bg);
+        color: var(--delete-color);*/
+       background-color: var(--a);
+       color: var(--d);
+}
+
+/* Status */
+.Active{
+	background-color: var(--active-bg);
+	color: var(--active-color);
+}
+.Deactive{
+	background-color: var(--deactive-bg);
+	color: var(--deactive-color);
+}
+
+/*--========== PAGINATION SECTION START =========--*/
+.pagination-container{
+  background-color:var(--a);
+  padding:0.5rem 0.25rem;
+  border-top:1px dotted var(--d);
+  border-radius:0.25rem;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+ /*box-shadow:1px 1px 0px 0px rgba(0,0,0,0.1);*/
+}
+
+
+#pagination-links{
+  display: flex;
+  margin: 0rem 0.25rem;
+  padding-left:0;
+}
+
+
+#pagination-links .page{
+  font-size: 1rem;
+  text-decoration: none;
+  color:var(--d);
+  display:block;
+  border-radius:100px;
+  outline: none;
+  border:none;
+  padding: 4px 10px;
+  background-color: transparent;
+}
+
+#pagination-links .page:hover{
+  padding: 4px 10px;
+  background-color: var(--btn-hover-bg);
+  color:var(--btn-hover-color);
+  cursor: pointer;
+}
+
+.pagination-container #Next, #Prev{
+  background-color:var(--d);
+  border-radius:1rem;
+  border:none;
+  box-shadow:1px 1px 3px 0px rgba(0,0,0,0.1);
+  padding:0.25rem 0.5rem;
+  cursor: pointer;
+  overflow: hidden;
+  font-weight: bold;
+  color: var(--a);
+}
+
+#pagination-links .activePage{
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-color);
+}
+
+/*--========== PAGINATION SECTION END =========--*/
+/*--============ Card View Table =================*/
+/* add class table-card-view after table-striped class */
+@media(max-width:667px) {
+  .table-card-view .thead{
+    display: none;
+  }
+  
+.table-card-view tbody,.table-card-view tbody tr{
+  padding: 0.5rem 0.5rem;
+  display: block;
+  width: 100%;
+  margin:0.5rem 0rem;
+  border-radius: 0.5rem;
+  float: right;
+  /*box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);*/
+}
+
+.table-card-view tbody tr th{
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius:10px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  background-color:var(--bx-bg);
+}
+
+.table-card-view tbody tr .status{
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+.table-card-view tbody tr th img{
+border-radius:5px;
+width:100px;
+height:100px;
+}
+
+.table-card-view tbody tr td{
+  display:block;
+  width: 50%;
+  border:0;
+  float: left;
+  font-weight: bold;
+}
+
+.table-card-view tbody tr td:before,.table-card-view tbody tr th:before{
+  content: attr(data-label);
+  display: block;
+  font-size: 0.5rem;
+  font-style: serif;
+  padding: 0.25rem;
+}
+
+.table-card-view .thead ,tbody tr:nth-child(even){
+ color:var(--e);
+ border:1px solid var(--b);
+ text-align:center;
+}
+
+}
+
+
+
+/* Form Theme */
+
+.form-theme{
+     background-color: var(--a);  
+}
+
+.form-theme-btn{
+     background-color: var(--d);
+     color: var(--a);
+     font-weight: bold;
+}
+
+
+.form-input-theme{
+  background-color: var(--b);
+  border-color:var(--d);
+  outline: none;
+  border:none;
+  box-shadow:none;
+}
+
+.form-input-theme:hover,.form-input-theme:focus {
+  background-color: var(--c);
+  border-color: var(--b);
+  outline: none;
+  border:none;
+  box-shadow:none;
+}
+
+.form-input-theme:hover.form-input-theme::placeholder,.form-input-theme:focus .form-input-theme::placeholder {
+  color:var(--b);
+  outline: none;
+  border:none;
+  box-shadow:none;
+}
+
+.form-input-theme::placeholder{
+  color:var(--d);
+  outline: none;
+  border:none;
+  box-shadow:none;
+}
+.measure{
+        color: var(--d);
+}
+
+/* Account */
+.account-theme{
+        background-color: var(--a);
+}
+
+.account-heading-theme{
+    background-color: var(--b);
+}
+
+.account-heading{
+    background-color: var(--b);
+    color: var(--d);
+}
+
+.account-heading-btn{
+  border:1px solid var(--d);
+  color: var(--d);
+}
+.account-btn{
+        color: var(--d);
+        font-weight: bold;
+}
+
+/* Main Page Layout */
+.main-page{
+   background-color: var(--a); 
+   height: 100vh;
+}
+.topButton{
+    border:2px solid var(--b);
+    background-color: var(--a); 
+}
+.layoutbtn{
+    color: var(--d); 
+    font-weight:bold;
+}
+.layoutbtn:hover{
+    color: var(--d); 
+    font-weight:bold;
+    box-shadow: none;
+    border-bottom: 2px solid var(--d);
+}
+
+
+
+.btnX{
+    color: var(--d);
+    font-weight:bold;
+}
+
+.addCustomer{
+        background-color: var(--b);
+        color: var(--d);
+        margin-bottom: .5rem;
+        font-weight: bold;
+}
+.fcl{
+    color: var(--d);
+    font-weight:bold;
+}
+.totalAmtH{
+        color: var(--d);
+}
+.totalAmt{
+        border: 1px solid var(--d);
+        color: var(--d);
+}
+
+.btnT{
+    color: var(--a);
+    background-color: var(--d);
+    font-weight:bold;
+}
+.DebitCreditBallance{
+        border: 1px solid var(--a);
+}
+
+.dbt, .crd, .blc{
+        color: var(--d);
+        padding-left: 1rem;
+        font-weight: bold;
+}
+
+.dbtD, .crdD, .blcD{
+        color: var(--d);
+        border: 1px solid var(--b);
+}
+.addProductAmt{
+        border: 1px solid var(--c);
+        background-color: var(--a);
+}
+
+table td{
+  white-space: nowrap;      
+}
+
+.loginSignup{
+        color: var(--d);
+        font-weight: bold;
+}
+
+.confirm-box{
+        background-color: rgba(0, 0, 0, 0.5); 
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.message-box{
+        background-color: #fff;
+        text-align: center;
+        font-family: serif;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.button-box{
+        margin-top: 30px;
+}
+.yes-button,
+.no-button{
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+}
+.yes-button{
+        background-color: seagreen;
+        color: #fff;
+}
+.no-button{
+background-color: indianred;
+color: #fff;
+}
+
+.invoiceTotal2{
+    color: var(--d);
+    border: 1px solid var(--d);
+    font-weight: bold;
+}
+
+.invoiceTotal1{
+    color: var(--d);
+    font-weight: bold;
+}
+
+

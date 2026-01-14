@@ -1,0 +1,104 @@
+:root {
+/* Theme Setup Color => a  :  too light 
+b : midium light => c : dark => d : too dark*/
+
+/*Theme Color*/
+  /*--a: #FFE4FF;
+  --b:#FFC6FF;
+  --c:#FFAAFF;
+  --d: #FF73FF;*/
+  /* Hover */
+--btn-hover-bg: var(--d);
+--btn-hover-color: var(--a);
+  
+/* Table spacial thead/tr */
+  --e:#000;/* header */
+  --f:#000;
+/*table spacial edit/delete*/
+  --edit-bg:#A2A9FF; 
+  --edit-color:#fff;
+  --delete-bg:var(--b);
+  --delete-color:#fff;
+/* Staus Active / Deactive */
+--active-bg:#47A66B;
+--active-color:#fff;
+--deactive-bg:#EA5EAF;
+--deactive-color:#fff;
+}
+
+
+
+
+/*green Theme 
+ --a: #E4FFE6;
+ --b:#91CF94;
+ --c:#82D286;
+ --d:#67C46B; */
+/* Pink Theme
+ --a: #FFE4FF; 
+ --b:#FFC6FF;  
+ --c:#FFAAFF; 
+ --d: #FF73FF; */
+
+/* Dark Theme 
+--a: #E7E7E7; 
+--b:#C5C5C5;  
+--c:#8E8E8E; 
+--d: #5C5C5C; */
+
+/*Blue Theme
+ --a: #EAEBFF; 
+ --b:#CED2FF;  
+ --c:#B2B9FF; 
+ --d: #969FFF; */
+ 
+/*Indian Red Theme
+ --a: #FFD3D3; 
+ --b:#FFAEAE;  
+ --c:#FF8484; 
+ --d: #FF6767;  */
+
+/*Light Theme
+ --a: #f1f1f1; 
+ --b:#C8C8C8;  
+ --c:#A0A0A0; 
+ --d: #727272;  */
+ 
+ /* Dark green theme
+--a: #72A5A4; 
+ --b:#488685;  
+ --c:#2F7170; 
+ --d: #1C5251; */
+ 
+ /* Light blue theme 
+ --a: #EBEDFFED; 
+ --b:#C8CDFFED;  
+ --c:#A3ABFFED; 
+ --d: #7A85FEED; */
+ 
+ /*Blue and Dark theme
+ --a: #ABAFD99E;
+ --b:rgba(0,0,0,0.2); 
+ --c:rgba(0,0,0,0.5); 
+ --d: rgba(0,0,0,0.8); */
+ 
+ 
+/*
+:root {*/
+/*-----------------------------------------*/
+/* Special color */
+/*--light: #fff;
+--dark: #000;*/
+/* theme */
+    /*--bx-bg: #E9EAF8;*/ /* too light *//*#5C839D*/
+    /*--btn-bg: #C3C5E0; *//* midium light *//*#85B5D5*/
+    /*--even: #ABAECD;*/ /* dark *//*#A9CCE4*/
+    /*--color: #000;*/ /* too dark *//*#000*/
+ /* nav active */
+/* --active-bg:#CACBE0;/*#974848*/
+/*--active-c: #888;*/
+ /*-----------------------------------------*/
+ /* Hover */
+/*--btn-hover-bg: var(--color);
+--btn-hover-color: var(--btn-bg);
+}*/

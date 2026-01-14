@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+</style>
+</head>
+<body>
+
+<!-- Admin set data -->
+<input type="hidden" id="admin" class="admin p-0 m-0" value="">
+
+<!-- Login Form [ page7 ] -->
+<div class="container mt-4 hideElement" id="page7">
+        <div class="row">
+            <div class="col-12">
+                
+                <div class="form">
+                     <form action="" method="post" class="form-theme pt-5 pb-3 px-4 rounded">
+                          <div class="form-group">
+                                     <input type="text" id="userNameL" class="form-control form-input-theme" placeholder="Your Company">
+                                     <div id="loginERROR" class="py-1 pl-2 text-danger"></div>
+                          </div>
+                          <div class="form-group">
+                               <input type="button" class="btn w-100 form-theme-btn mb-2" id="Login" value="Open" onclick="login()">
+                               <input type="button" class="btn loginSignup" id="Register" value="CREATE NOW" onclick="layout('page8')">
+                          </div>
+                     </form>
+                </div>
+               
+            </div>
+        </div>  
+  </div>
+  
+<!-- Register Form [ page8 ] -->
+<div class="container mt-4 hideElement" id="page8">
+        <div class="row">
+            <div class="col-12">
+                
+                <div class="form">
+                     
+                     <form class="form-theme pt-5 pb-3 px-4 rounded">
+                           <!--<div class="float-right py-2 px-2">
+                             <a href="#" class="btn btnX" onclick="layout('page1')">X</a>
+                           </div>-->
+                          <div class="form-group">
+                                     <input type="text" id="userName" class="form-control form-input-theme" placeholder="Your Company">
+                                     <div id="registerERROR" class="py-1 pl-2 text-danger"></div>
+                          </div>
+                          <div class="form-group">
+                               <input type="button" class="btn w-100 form-theme-btn mb-2" id="Register" value="Create" onclick="register()">
+                               <input type="button" class="btn loginSignup" id="Login" value="OPEN NOW" onclick="layout('page7')">
+                               <div id="rSuccessSMS" class="py-1 pl-2 mt-2"></div>
+                          </div>
+                     </form>
+                </div>
+               
+            </div>
+        </div>  
+  </div>
+
+<!-- All Programs Open After Login --
+<div class="Container p-0 m-0 hideElement" id="pages">
+     <div class="row p-0 m-0">
+          <div class="col-12 p-0 m-0"> -->
+                  
+
+  <!-- Button Page Kayout -->
+  <div class="container hideElement d-print-none" id="pageBTN">
+       <div class="row justify-content-center">
+            <div class="col-12 pt-4">
+                 <div class="topButton d-flex justify-content-center align-items-center rounded px-2 py-2 shadow-sm">
+                        <button class="btn layoutbtn" onclick="layout('page1')">Customer</button>
+                        <button class="btn layoutbtn" onclick="layout('page3')">Product</button>
+                        <button class="btn layoutbtn" onclick="layout('page4')">Transection</button>
+                 </div>
+            </div>
+       </div>
+  </div>
+ 
+  <!-- Customer Form [ page2 ] -->
+  <div class="container mt-4 hideElement" id="page2">
+        <div class="row">
+            <div class="col-12">
+                
+                <div class="form">
+                     
+                     <form action="" method="post" class="form-theme pt-5 pb-3 px-4 rounded">
+                           <!--<div class="float-right py-2 px-2">
+                             <a href="#" class="btn btnX" onclick="layout('page1')">X</a>
+                           </div>-->
+                          <div class="form-group">
+                                     <input type="text" name="" id="customer" class="form-control form-input-theme" placeholder="Customer">
+                                     <div id="customerErrorSMS" class="py-1 pl-2 text-danger"></div>
+                          </div>
+                          <div class="form-group">
+                               <input type="button" class="btn w-100 form-theme-btn" id="Save" value="Save" onclick="addCustomer()">
+                               <input type="button" class="btn w-100 form-theme-btn" id="Update" value="update" onclick="updateCustomer()">
+                               <div id="customerSuccessSMS" class="py-1 pl-2 text-success mt-2"></div>
+                          </div>
+                     </form>
+                </div>
+               
+            </div>
+        </div>  
+  </div>
+  
+  <!-- Customer Name [ page1 ]-->
+  <div class="container hideElement mt-4" id="page1">
+          <div class="row">
+               <div class="col-12">
+                     <div><a class="btn border addCustomer" href="#" onclick="layout('page2')">Add Customer</a><a class="btn border addCustomer ml-3" href="#" onclick="layout('page9')">Set Theme</a></div>
+                </div> 
+          </div>
+          <div class="row pt-2">
+               <div class="col-12">
+                     <div id="customerData"></div>
+                </div> 
+          </div>
+  </div>
+  
+  <!-- Add Product And Bill Generate [ page3 ]-->
+  <div class="container mt-4 mb-3 hideElement" id="page3">
+          <div class="row"> <!-- Add Form -->
+                  <div class="col-12">
+  
+                          <div class="form">
+  
+                                  <form id="addProduct" class="form-theme pt-4 pb-3 px-4 rounded">
+                                          <!--<div class="float-right py-2 px-2">
+                                                  <a href="#" class="btn btnX" onclick="layout('page1')">X</a>
+                                          </div>-->
+                                          <div class="form-group">
+                                                  <input type="text"  id="product" class="form-control form-input-theme" placeholder="Product">
+                                                  <div id="ProductSMS" class="py-1 pl-2 text-danger"></div>
+                                          </div>
+                                          <div class="form-group">
+                                                  <input type="text" id="quantity" class="form-control form-input-theme" placeholder="Quantity">
+                                                  <div id="quantitysms" class="py-1 pl-2 text-danger d-none"></div>
+                                          </div>
+                                          <div class="form-group">
+                                                  <select id="measurement" class="form-control form-input-theme measure">
+                                                          <option value="PCS">PCS</option>
+                                                          <option value="KILO">KILO</option>
+                                                          <option value="KILOGRAM">KILOGRAM</option>
+                                                          <option value="GRAMS">GRAMS</option>
+                                                  </select>
+                                          </div>
+                                          <div class="form-group">      
+                                                  <input type="text"  id="price" class="form-control form-input-theme" placeholder="Price">
+                                                  <div id="pricesms" class="py-1 pl-2 text-danger"></div>
+                                          </div>
+                                          <div class="form-group">
+                                                  <input type="button" class="btn w-100 form-theme-btn" id="Save" value="Save" onclick="addProduct()">
+                                                  <input type="button" class="btn w-100 form-theme-btn" id="Update" value="update" onclick="updateProduct()">
+                                                  <div id="ErrorM" class="pl-2 text-danger"></div>
+                                          </div>
+                                  </form>
+                          </div>
+  
+                  </div>
+          </div>  <!-- Add Form End-->
+          <div class="row pt-2">
+              <div class="col-12">
+                       <div class="table-responsive">
+             <table class="table mb-0"> <!--table-striped-->
+                  <thead class="thead thead-theme ">
+                             <th style="width:120px;">Product</th>
+                             <th>Qty</th>
+                             <th>Price</th>
+                             <th>Total</th>
+                             <th>Action</th>
+                        </tr>
+                  </thead>
+                  <tbody id="showProduct">
+
+                  </tbody>
+                  </table>  
+                 </div>
+                 <div class="py-3 addProductAmt rounded pl-5 mt-2">
+                        <span class="pr-4 font-weight-bold totalAmtH">TOTAL AMOUNT</span><span id="ProductTotalAmount" class="  p-2 rounded totalAmt"></span>
+                 </div>
+              </div>
+          </div>
+          <div class="row pt-2">
+                <div class="col-12" >
+                     <form id="billing" class="form-theme pt-4 pb-3 px-4 rounded">
+                          <!-- <div id="hiden">
+                           </div> -->
+                            <div class="form-group">
+                                        <select id="CustomerRecord" class="form-control form-input-theme measure">
+                                        </select>
+                            </div>
+                            <div class="form-check-inline pb-3">
+                                  <label for="credit" class="form-check-label fcl mx-2">Credit (-)</label>
+                                  <input type="radio" name="ccd" id="credit" class="form-check-input fci" value="Credit" checked>
+                                  <label for="credit" class="form-check-label fcl mx-2">Debit (+)</label>
+                                  <input type="radio" name="ccd" id="debit" class="form-check-input fci" value="Debit">
+                            </div>
+                            
+                            <div class="form-group">      
+                                         <input type="text"  name="notation" id="Notation" class="form-control form-input-theme" placeholder="Nairation" required>
+                                         <div id="pricesms" class="py-1 pl-2 text-danger"></div>
+                            </div>
+                            <div class="form-group">      
+                                         <!--<button type="submit" class="form-control btn w-100 form-theme-btn">Generate Bill</button>-->
+                                         <input type="button" value="Generate" onclick="Billing()" class="btn w-100 form-theme-btn">
+                                         <div class="text-danger" id="GbillSMS"></div>
+                            </div>
+                     </form>
+                </div>  
+          </div>
+  </div>
+  
+  <!-- transection [ page4 ]-->
+  <div class="container mt-4 hideElement" id="page4">
+            <div class="row">
+                    <div class="col-12">
+  
+                            <div class="form">
+  
+                                   <form id="transection"  class="form-theme pt-4 pb-3 px-4 rounded">
+                                            <div class="form-group">
+                                                    <select id="CustomerRecordT" class="form-control form-input-theme measure">
+                                                    </select>
+                                            </div>
+                                             <div class="form-group">
+                                                   <input type="text" id="Amount" class="form-control form-input-theme" placeholder="Amount">
+                                                    <div id="pricesms" class="pt-1 pl-2 text-danger"></div>
+                                            </div>
+                                            <div class="form-check-inline pb-3">
+                                                    <label for="credit" class="form-check-label fcl mx-2">Credit (-)</label>
+                                                    <input type="radio" name="cd" id="credit" class="form-check-input" value="Credit" checked>
+                                                    <label for="credit" class="form-check-label fcl mx-2">Debit (+)</label>
+                                                    <input type="radio" name="cd" id="debit" class="form-check-input" value="Debit">
+                                            </div>
+                                    
+                                            <div class="form-group">
+                                                    <input type="text" id="Not" class="form-control form-input-theme" placeholder="Nairation">
+                                                    <div id="pricesms" class="py-1 pl-2 text-danger"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                  <button type="button" class="btn w-100 btnT" onclick="Transection()">Submit</button>
+                                                  <div id="TransectionSMS" class=""></div>
+                                                          
+                                                
+                                            </div>
+                                    </form>
+                            </div>
+  
+                    </div>
+            </div>
+    </div>
+ 
+  <!-- Show Transection Customer Bise [ page5 ] -->
+  <div class="container mt-4 hideElement" id="page5">
+        <div class="row">
+         <div class="col-12">
+              <div class="py-3 my-2 rounded DebitCreditBallance">
+                   <div class="row align-items-center">
+                        <div class="col-md-2 col-4 pr-0"><div class="dbt" id="">DEBIT</div></div>  
+                        <div class="col-md-2 col-4 pl-0 text-center"><div class="dbtD py-1 my-1 rounded" id="TotalDBT"></div></div>
+                   </div>
+                   <div class="row align-items-center">
+                        <div class="col-md-2 col-4 pr-0"><div class="crd" id="">CREDIT</div></div>  
+                        <div class="col-md-2 col-4 pl-0 text-center"><div class="crdD py-1 my-1 rounded" id="TotalCRD"></div></div>
+                   </div>
+                   <div class="row align-items-center">
+                        <div class="col-md-2 col-4 pr-0"><div class="blc" id="">BALLANCE</div></div>  
+                        <div class="col-md-2 col-4 pl-0 text-center"><div class="blcD py-1 my-1 rounded" id="TotalBLC"></div></div>
+                   </div>
+              </div>
+         </div>   
+    </div>
+    
+    <div class="row">
+        <div class="col-12">
+        <div class="table-container">
+       <!--table top start-->
+       <!--<div class="d-flex justify-content-between align-items-center">
+             <div class=" table-heading rounded">Content Master</div>
+             <input type="text" class="form-control table-search" name="search" id="search" placeholder="search">
+       </div>--
+       <div class="add-table d-flex justify-content-end align-items-center">
+             --<a href="">Add Now</a>--
+             <a href="#" class="btn btnX" onclick="layout('page1')">X</a>
+             </div>-->
+       <!--table top end-->
+       <!--Table start-->
+   <!-- <div class="py-3 border">
+           <div class="pl-2">
+                 <div><span class="dbt">DEBIT</span><span id="TotalDBT" class="dbtData px-2 py-1 rounded"></span></div>   
+          </div>
+           <div class="pl-2 pb-1">
+                  <div><span class="crd">CREDIT</span><span id="TotalCRD" class="crdData px-2 py-1 rounded"></span></div>  
+           </div>
+           <div class="py-1 pl-2 blc-top">
+                  <div><span class="blc">BALLANCE</span><span id="TotalBLC" class="blcData "></span></div> 
+           </div>
+    </div>-->
+      
+       <div class="table-responsive">
+             <table class="table mb-0"> <!--table-striped -->
+                  <thead class="thead thead-theme">
+                             <th class="text-left pl-3">Particular</th>
+                             <th>Debit</th>
+                             <th>Credit</th>
+                             <th>Date</th>
+                             <th>Time</th>  
+                             <th>Action</th>
+                        </tr>
+                  </thead>
+                  <tbody id="tbody">
+                  </tbody>
+             </table>  
+       </div>
+       <!--Table end-->
+       <!--Pagination start-->
+       <!--<div class="pagination-container">
+             <button id="Prev">Prev</button>
+                    <div id="pagination-links">
+                           <button type="button" value="" class="page mx-1">1</button>
+                           <button type="button" value="" class="page mx-1 activePage">2</button>
+                           <button type="button" value="" class="page mx-1">3</button>
+                    </div>
+             <button id="Next">Next</button>
+       </div>-->
+       <!--Pagination end-->
+      <button class="d-print-none btn print-btn" onclick="window.print()">Print to PDF</button>
+</div>
+
+        </div>
+    </div>
+  </div>
+
+  <!-- Show Invoice Customer Transection Bise [ page6 ] -->
+  <div class="container mt-4 hideElement" id="page6">
+    <div class="row">
+        <div class="col-md-12">
+             
+<div class="table-container">
+       <!--table top start-->
+       <!--<div class="d-flex justify-content-between align-items-center">
+             <div class=" table-heading rounded">Content Master</div>
+             <input type="text" class="form-control table-search" name="search" id="search" placeholder="search">
+       </div>-->
+       <div class="add-table d-flex justify-content-between align-items-center rounded d-print-none">
+             <a href="#">Invoice</a>
+             <a href="#" class="btn btnX" onclick="layout('page5')">X</a>
+             </div>
+       <!--table top end-->
+       <!--Table start-->
+       <div class="table-responsive">
+             <table class="table mb-0 w-100"> <!--table-striped -->
+                  <thead class="thead thead-theme">
+                             <th>Particular</th>
+                             <th>Qty</th>
+                             <th>Rate</th>
+                             <th>Total</th>
+                        </tr>
+                  </thead>
+                  <tbody id="tbod">
+
+                  </tbody>
+             </table>  
+       </div>
+       <div class="d-flex justify-content-between align-items-center pr-4 pt-4">
+            <div class="w-50 d-flex justify-content-start align-items-center">
+                    <button class="d-print-none btn print-btn" onclick="window.print()">Print to PDF</button>
+            </div>
+            <div><span class="invoiceTotal1 pr-2">SUB TOTAL</span> <span class="invoiceTotal2 p-2 py-2 rounded" id="invoiceTotal"></span></div>
+       </div>
+       <!--Table end-->
+       <!--Pagination start-->
+       <!--<div class="pagination-container">
+             <button id="Prev">Prev</button>
+                    <div id="pagination-links">
+                           <button type="button" value="" class="page mx-1">1</button>
+                           <button type="button" value="" class="page mx-1 activePage">2</button>
+                           <button type="button" value="" class="page mx-1">3</button>
+                    </div>
+             <button id="Next">Next</button>
+       </div>-->
+       <!--Pagination end-->
+</div>
+
+        </div>
+    </div>
+  </div>
+  
+  
+  <!-- Theme Setup [Page9] ---->
+  <div class="container mt-4 hideElement" id="page9">
+        <div class="row">
+            <div class="col-12">
+                 <div>
+                       <div class="group d-flex position-relative">
+                               <input type="button" class="form-control controler" id="controler" value="Select Theme">
+                               <span class="position-absolute icon" id="icon">&#x25BC</span>
+                               <div class="selection position-absolute" id="selection">
+                                       <a href="#" value="greenTheme" class="selectValue">Green Theme</a>
+                                       <a href="#" value="pinkTheme" class="selectValue">Pink Theme</a>
+                                       <a href="#" value="darkTheme" class="selectValue">Dark Theme</a>
+                                       <a href="#" value="blueTheme" class="selectValue">Blue Theme</a>
+                                       <a href="#" value="indianRedTheme" class="selectValue">Indian Red Theme</a>
+                                       <a href="#" value="darkGreenTheme" class="selectValue">Dark Green Theme</a>
+                                       <a href="#" value="lightBlueTheme" class="selectValue">Light Blue Theme</a>
+                                       <a href="#" value="blueDarkTheme" class="selectValue">Blue - Dark Theme</a>
+                                       <a href="#" value="lightTheme" class="selectValue">Light Theme</a>
+                               </div>
+                       </div>
+                </div>
+            </div>
+        </div>  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  <!--          </div>
+     </div>  
+</div>
+  -->
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
+
+
